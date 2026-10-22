@@ -64,18 +64,18 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           {/* Detailed Overview */}
           <div className="p-4 rounded-xl bg-[#141418] border border-zinc-800/80">
             <h3 className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-2">
-              Overview &amp; Purpose
+              Project Overview
             </h3>
             <p className="leading-relaxed text-zinc-200 text-xs sm:text-sm">
               {project.description}
             </p>
           </div>
 
-          {/* Architectural Decisions & Features */}
+          {/* Key Implementation Details */}
           {project.architecture && (
             <div>
               <h3 className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-3">
-                Key Architectural Highlights
+                Key Implementation Details
               </h3>
               <ul className="space-y-2 text-xs sm:text-sm list-none p-0 m-0">
                 {project.architecture.map((item, idx) => (

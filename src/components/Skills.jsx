@@ -12,7 +12,7 @@ export default function Skills() {
     { id: "all", label: "All Domains" },
     { id: "frontend", label: "Frontend" },
     { id: "backend-db", label: "Backend & Database" },
-    { id: "tools-deployment", label: "Tools & DevOps" },
+    { id: "tools-deployment", label: "Tools" },
   ];
 
   const getCategoryIcon = (id) => {
@@ -54,7 +54,7 @@ export default function Skills() {
           <div className="flex items-center gap-2 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-rose-500" aria-hidden="true" />
             <span className="text-xs font-mono uppercase tracking-widest text-zinc-400">
-              02 / Technical Competencies
+              02 / Technical Skills
             </span>
           </div>
 
@@ -62,11 +62,11 @@ export default function Skills() {
             id="skills-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight"
           >
-            Technical Stack &amp; Architectural Toolkit
+            Technical Stack
           </h2>
 
           <p className="mt-3 text-sm sm:text-base text-zinc-400 leading-relaxed">
-            Curated toolkit spanning modern client-side architectures, RESTful API design, database schemas, and deployment pipelines.
+            Languages, frameworks, libraries, and developer tools organized by domain.
           </p>
         </motion.div>
 
@@ -135,9 +135,6 @@ export default function Skills() {
                           {cat.label}
                         </h3>
                       </div>
-                      <span className="text-[11px] font-mono text-zinc-500 uppercase">
-                        {cat.skills.length} Tools
-                      </span>
                     </div>
 
                     {/* Category Summary */}
@@ -145,32 +142,19 @@ export default function Skills() {
                       {cat.description}
                     </p>
 
-                    {/* Detailed Skills Matrix */}
-                    <div className="space-y-2.5">
+                    {/* Clean Categorized Skills List */}
+                    <div className="space-y-2">
                       {cat.skills.map((skill) => (
                         <div
                           key={skill.name}
-                          className="group p-2.5 rounded-xl bg-[#141418] border border-zinc-800/70 hover:border-zinc-700 hover:bg-[#18181d] transition-all flex items-center justify-between"
+                          className="group p-2.5 sm:p-3 rounded-xl bg-[#141418] border border-zinc-800/70 hover:border-zinc-700 hover:bg-[#18181d] transition-all flex items-center justify-between gap-3"
                         >
-                          <div className="space-y-0.5">
-                            <div className="flex items-center gap-2">
-                              <span className="text-xs font-mono font-semibold text-zinc-200 group-hover:text-white transition-colors">
-                                {skill.name}
-                              </span>
-                              {skill.level === "Core" && (
-                                <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                                  Core
-                                </span>
-                              )}
-                            </div>
-                            <div className="text-[11px] text-zinc-400 group-hover:text-zinc-300 transition-colors">
-                              {skill.note}
-                            </div>
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500/70 group-hover:bg-rose-500 transition-colors shrink-0" />
+                            <span className="text-xs font-mono font-semibold text-zinc-200 group-hover:text-white transition-colors truncate">
+                              {skill.name}
+                            </span>
                           </div>
-
-                          <span className="text-[10px] font-mono text-zinc-500 group-hover:text-zinc-400">
-                            {skill.level}
-                          </span>
                         </div>
                       ))}
                     </div>

@@ -137,11 +137,11 @@ export default function Projects() {
             id="projects-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight"
           >
-            Featured Applications
+            Featured Projects
           </h2>
 
           <p className="mt-3 text-sm sm:text-base text-zinc-400 leading-relaxed">
-            Production-focused web applications built with Next.js, React, TypeScript, and MongoDB—emphasizing clean architecture, real user utility, and responsive UX.
+            Web applications built with Next.js, React, TypeScript, and MongoDB.
           </p>
         </motion.div>
 
@@ -185,23 +185,6 @@ export default function Projects() {
                   <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
                     {project.description}
                   </p>
-
-                  {/* Architectural Highlights List */}
-                  {project.architecture && (
-                    <div className="pt-2 space-y-1.5">
-                      <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
-                        Highlights:
-                      </span>
-                      <ul className="space-y-1 text-xs list-none p-0 m-0">
-                        {project.architecture.slice(0, 2).map((item, aIdx) => (
-                          <li key={aIdx} className="flex items-start gap-1.5 text-zinc-400 text-xs">
-                            <span className="text-rose-500 font-bold" aria-hidden="true">•</span>
-                            <span className="line-clamp-1">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
                 </div>
               </div>
 

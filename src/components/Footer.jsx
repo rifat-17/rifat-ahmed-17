@@ -76,12 +76,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits Strip */}
-        <div className="pt-6 border-t border-zinc-800/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-zinc-600">
+        <div className="pt-6 border-t border-zinc-800/60 flex items-center justify-center gap-3 text-[11px] font-mono text-zinc-600">
           <p>
             &copy; {currentYear} {personalData.name}. All rights reserved.
-          </p>
-          <p>
-            Designed with Next.js 15, React 19, Tailwind CSS &amp; Framer Motion.
           </p>
         </div>
       </div>

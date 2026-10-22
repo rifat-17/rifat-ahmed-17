@@ -15,7 +15,7 @@ export default function Navbar({ onOpenResume }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 15);
 
-      const sections = ["about", "skills", "projects", "education", "contact"];
+      const sections = ["about", "skills", "projects", "contact"];
       const scrollPosition = window.scrollY + 220;
 
       for (const sectionId of sections) {
