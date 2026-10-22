@@ -137,7 +137,7 @@ export default function Projects() {
             id="projects-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight"
           >
-            Featured Applications &amp; Case Studies
+            Featured Applications
           </h2>
 
           <p className="mt-3 text-sm sm:text-base text-zinc-400 leading-relaxed">

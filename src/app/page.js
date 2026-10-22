@@ -34,7 +34,7 @@ export default function Home() {
         <Projects />
 
         {/* 04: Education & Foundation Section */}
-        <Education />
+        {/* <Education /> */}
 
         {/* 05: Contact Section */}
         <Contact />
